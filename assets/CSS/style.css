@@ -1,0 +1,46 @@
+
+
+/*Estilos Gerais*/
+
+.center{
+    text-align: center;
+}
+
+div {
+    padding: 20px; 
+    margin-bottom: 30px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+
+/*Botoes*/
+
+.botoes { 
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;
+    margin: 2%;
+}
+
+.fotobotao  {
+    text-decoration: none;     
+    cursor: pointer;
+}
+
+
+/*Fontes*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
