@@ -20,14 +20,14 @@
         </a>     
     </div>
     
-    <h1 class="center"> Mozart Cuman Albuquerque</h1>
+    <h1 class="center" style="padding-top: 160px;"> Mozart Cuman Albuquerque</h1>
 
     <h2 class="center"> Sobre</h2>
 
     <div style="overflow: auto;">
         <img src="assets/img/fotoMozart.jpeg"  width="400" height="400" alt="Foto do criador deste conteudo." style="float: left; margin-right: 10px;">
 
-        <p>
+        <p class="container">
             - Desejo trabalhar com desenvolvimento de soluções e engenharia, sou inspirado do ponto que 
             no mundo da programação, todas as pessoas têm capacidade de criar e trazer vida a seus 
             sonhos, construir castelos, aplicações, jogos e conseguir observar tudo se solidificar com o 
@@ -35,23 +35,167 @@
             conhecimentos, crescer profissionalmente junto a experiência de pessoas maduras no mercado 
             e me superar a cada dia com novos desafios.
         </p>
-        <p>
+        <p class="container">
             - Como passatempo gosto de GO, Xadrez, jogos de cartas e de defesa, frequento museus, e sempre 
             quando possível, gosto de almoçar nos finais de semana com minha família que muito valorizo.
         </p>
     </div>
 
-    <div class="center">    
-        <h2> Video</h2>
-        <p>
-            Gosto muito de assistir esses videos de comida estranhos!!!!
-        </p>
-        <iframe width="400" height="400" src="https://www.youtube.com/embed/qGDBo1gwCUc" 
-        title="Thanksgiving with mom is…a little different 😅😂" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2 class="center"> Mídia</h2>
+
+    <div class="videosg">    
+        <div class="videos">
+            <p class="container">
+                Gosto muito de assistir esses videos de comida estranhos!!!!
+            </p>
+            <iframe width="400" height="400" src="https://www.youtube.com/embed/qGDBo1gwCUc" 
+            title="Thanksgiving with mom is…a little different 😅😂" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="videos">
+            <p class="conteiner">
+                Vídeo inspirador que me ajuda a pensar.
+            </p>
+            <iframe width="400" height="400" src="https://www.youtube.com/embed/K828fCF7Wr8?si=knCO58RYrXJRwNq3" 
+            title="Vencendo a procrastinação!" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
     </div>
 
+    <div>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+
+            }/*Abrindo a div fundo justamente para ajustar o gradiente, que devera estar a 45 graus na pagina e indo de uma cor a outra na transição*/
+            .fundo{
+                background-image: linear-gradient(45deg, black, pink);
+                /*Vale a pena denotar que a baixo poderia ser posto tanto height 100% + width 100% tanto quanto o método VH que foi implementado */
+               /* height: 90vh;*/
+                color: whitesmoke;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .calculadora{
+                position: sticky;
+                /*como esta em 0.5 ira ocorrer uma transparencia. se estivece em um seria completMENTE SOLIDO*/
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                /*aumentando um pouco o preenchimento por estetica*/
+                padding: 10px;
+                
+                align-items: center;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .botao{
+                background-color: thistle;
+                width: 50px;
+                height: 60px;
+                font-size: 25px;
+                /*Cursor pointer da uma ação de mudar o formato do cursor quando passar no botao*/
+                cursor: pointer;
+                border: none;
+                color: brown;
+                margin: 1px;
+                
+                align-items: center;
+                text-align: center;
+            }
+            .botao:hover{background-color: blueviolet;}
+            #resultado{
+                height: 30px;
+                width: 208px;
+                margin: 5px;
+                background-color: white;
+                font-size: 25px;
+                color: black;
+                text-align: right;
+                padding: 1px;
+                border-color: black;
+                border-radius: 15px;
+                
+                align-items: center;
+                text-align: center;
+            }
+
+        </style>
+   
+        <div class='fundo'>
+            <!--todo o conteudo vai ficar dentro desta div-->
+             
+        
+            <h1 >Demonstração</h1>
+            <br>
+            <br>
+            <p> Aqui um pequeno exemplo de programação, e implementação.</p>
+            <div class='calculadora'>
+                
+                <h1>Calculadora</h1>
+                <!--parágrafo principal que vai ficar parecido com o imput onde irá ser retornado o resultado-->
+                <p id='resultado'></p>
+                <table>
+                    <!--os botoes estao com classe para que possam ser modificados no css-->
+                    <tr>
+                        <td><button class="botao" onclick="clean()">C</button></td>
+                        <td><button class="botao" onclick="back()"><</button></td>
+                        <td><button class="botao" onclick="insert('/')">/</button></td>
+                        <td><button class="botao" onclick="insert('X')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('7')">7</button></td>
+                        <td><button class="botao" onclick="insert('8')">8</button></td>
+                        <td><button class="botao" onclick="insert('9')">9</button></td>
+                        <td><button class="botao" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('4')">4</button></td>
+                        <td><button class="botao" onclick="insert('5')">5</button></td>
+                        <td><button class="botao" onclick="insert('6')">6</button></td>
+                        <td><button class="botao" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('1')">1</button></td>
+                        <td><button class="botao" onclick="insert('2')">2</button></td>
+                        <td><button class="botao" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botao" style="height: 122px;" onclick="calcular()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 102px;" onclick="insert('0')">0</button></td>
+                        <td><button class="botao" onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            function insert(num){
+              var numero = document.getElementById('resultado').innerHTML;
+              document.getElementById('resultado').innerHTML = numero + num;
+            }
+            function clean(){
+                document.getElementById('resultado').innerHTML = "";
+            }
+            function back(){
+                var resultado = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);   
+            }
+            function calcular(){
+                var resultado = document.getElementById('resultado').innerHTML;
+                if(resultado){
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                }
+            }
+
+        </script>
+    </div>
     
 </body>
 </html>

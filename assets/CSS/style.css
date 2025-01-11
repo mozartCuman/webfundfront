@@ -15,6 +15,11 @@ img{
     border-radius: 50%;
 }
 
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
 /*Botoes*/
 
@@ -23,11 +28,24 @@ img{
     justify-content: space-evenly;  
     align-items: center;
     margin: 2%;
+    background-color: rgb(175, 128, 136);
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    padding: 10px 0; /* Espaçamento interno */ 
+    z-index: 1000
 }
 
 .fotobotao  {
     text-decoration: none;     
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    
+    
+}
+.fotobotao:hover{
+    background-color: brown;
+    border-radius: 20%;
 }
 
 
@@ -35,12 +53,29 @@ img{
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(205, 207, 207);
+    
 }
 
 h1, h2 {
     font-family: 'Times New Roman', Times, serif;
+    color: maroon;
 }
 
 p {
     font-family: 'Courier New', Courier, monospace;
+}
+
+/*Videos*/
+
+.videosg{
+    text-align: center;
+    display: flex;  
+    justify-content: space-between; 
+    gap: 10px;
+}
+
+.videos{
+    flex: 1;
+    padding: 10px;
 }
