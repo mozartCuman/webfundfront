@@ -68,14 +68,32 @@ p {
 
 /*Videos*/
 
-.videosg{
+.videosg{ 
+    margin-bottom: 20px; 
     text-align: center;
-    display: flex;  
-    justify-content: space-between; 
-    gap: 10px;
+} 
+
+@media screen and (min-width: 700px) { 
+    .videosg { 
+        display: flex; 
+        flex-direction: row; 
+    } .videosg iframe { 
+        flex: 1; 
+    } 
+} 
+
+@media screen and (max-width: 699px) { 
+    .videog { 
+        display: flex; 
+        flex-direction: column; 
+    } .videosg iframe { 
+        width: 100%; 
+    } 
 }
+    
+   
 
 .videos{
-    flex: 1;
+    flex: auto;
     padding: 10px;
 }

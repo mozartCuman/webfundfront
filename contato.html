@@ -38,32 +38,26 @@
     </div>
 
     <div class="center" style="background-color: rgb(205, 207, 207);">
+        
         <h2>Entre em contato comigo</h2>
-    <form>
-        <label for="nome"> Nome:</label>
-        <input type="text" id="nome" onkeyup="validaNome()">
-        
-        <div id="txtNome">
 
-        </div>
-       
+        <form>
 
-        <label for="email"> E-mail:</label>
-        <input type="email" id="email" onkeyup="validaEmail()">
-        <div id="txtEmail"></div>
-        
+            <label for="nome"> Nome:</label>
+            <input type="text" id="nome" onkeyup="validaNome()">
+            <div id="txtNome"></div>
 
-        <label for="assunto"> Assunto</label>
-        <textarea name="assunto" id="assunto" cols="40" rows="5" onkeyup="validaAssunto()"></textarea>
-        <div id="txtAssunto"></div>
-        
-        <button id="enviar">Enviar</button>
+            <label for="email"> E-mail:</label>
+            <input type="email" id="email" onkeyup="validaEmail()">
+            <div id="txtEmail"></div>
+            
+            <label for="assunto"> Assunto:</label>
+            <textarea name="assunto" id="assunto" onkeyup="validaAssunto()" cols="40" rows="5"></textarea>
+            <div id="txtAssunto"></div>
 
-        
-    </form>
-
-
-
+            <button type="button" onclick="enviar()">Enviar</button>
+            
+        </form>
     </div>
 
     <div class="center" style="background-image: linear-gradient(90deg, black, pink);">
@@ -76,5 +70,6 @@
     </div>
     
     <script src="assets/JS/script.js"></script>
+
 </body>
 </html>
